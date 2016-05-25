@@ -1,0 +1,95 @@
+CREATE TABLE brend (
+    brend_id INT(4) NOT NULL AUTO_INCREMENT,
+    brand_name VARCHAR(30) NOT NULL,
+    PRIMARY KEY(brend_id)
+    );
+    
+ CREATE TABLE category (
+    cat_id INT(4) NOT NULL AUTO_INCREMENT,
+    cat_name VARCHAR(30) NOT NULL,
+    subcat_id INT(4) NOT NULL,
+    PRIMARY KEY(cat_id)
+    );
+    
+ CREATE TABLE subcat (
+    subcat_id INT(4) NOT NULL AUTO_INCREMENT,
+    cat_id INT(4) NOT NULL,
+    subcat_name VARCHAR(30) NOT NULL,
+    PRIMARY KEY(subcat_id)
+    );
+    
+ CREATE TABLE product (
+    prod_id INT(5) NOT NULL AUTO_INCREMENT,
+    cat_id INT(4) NOT NULL,
+    subcat_id INT(4) NOT NULL,
+    brend_id VARCHAR(30) NOT NULL,
+    prod_name VARCHAR(30) NOT NULL,
+    price_in INT(5),
+    disc_price INT(2),
+    price_out INT(5),
+    photo_id INT(5),
+    warranty INT(2),
+    charcs_id INT(5) NOT NULL,
+    date_incoming INT(10) NOT NULL,
+    PRIMARY KEY(prod_id)
+   );
+  
+   
+CREATE TABLE users (
+    user_id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    surname VARCHAR(30) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    is_admin BOOLEAN,
+    PRIMARY KEY(user_id)
+    );
+       
+   
+CREATE TABLE bascet (
+    bascet_id INT(5) NOT NULL,
+    prod_id INT(5) NOT NULL,
+    quantity INT(5) NOT NULL,
+    sale INT (2),
+    price_total INT(5) NOT NULL,
+    variants VARCHAR (100),
+    installation BOOLEAN,
+    date_in INT(5) NOT NULL,
+    PRIMARY KEY(bascet_id)
+   );   
+   
+ CREATE TABLE orderedprod (
+    ordered_id INT(5) NOT NULL,
+    prod_id INT(5) NOT NULL,
+    quantity INT(5) NOT NULL,
+    sale INT (2),
+    price_total INT(5) NOT NULL,
+    variants VARCHAR (100),
+    installation BOOLEAN,
+    order_date INT(5) NOT NULL,
+    PRIMARY KEY(ordered_id)
+);    
+
+CREATE TABLE photos (
+    prod_id INT(5) NOT NULL,
+    source VARCHAR (50) NOT NULL,
+    PRIMARY KEY (prod_id)
+);    
+    
+CREATE TABLE orders (
+      orders_id INT(5) AUTO_INCREMENT;
+      user_id INT(5) NOT NULL,
+      prod_ord INT(5) NOT NULL,
+      quantity INT(3) NOT NULL,
+      sale INT (2),
+      price_total INT(5) NOT NULL,
+      adress VARCHAR (50) NOT NULL,
+ 
+  
+ Admincond1984
+ axafb2  
+1236777b5ba59e6935019a647a45ddff
+    
+    
+ 
+     
